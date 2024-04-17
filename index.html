@@ -13,7 +13,7 @@
   <nav class="mobile-menu">
 
     <a class="active" href="" onclick="return false">About Me</a>
-    <a href="">Skills</a>
+    <a href="">Work</a>
     <a href="">Projects</a>
     <a href="">Education</a>
     <a href="">Collaborators</a>
@@ -27,13 +27,115 @@
       </button>
     </div>
 
-  <main>
+    <nav class="scroll-nav">
+      <button onclick="scrollAbout()">About</button>
+      <button onclick="scrollWork()">Work</button>
+      <button onclick="scrollProjects()">Projects</button>
+      <button onclick="scrollContact()">Contact</button>
+    </nav>
 
+  <main>
+    <article>
+      <section>
+      <h1 id="test">Hello! I am Zixuan Huang</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dicta et iure voluptatibus dolores officiis? Laboriosam nemo exercitationem vel nihil quisquam minima beatae porro aspernatur, debitis aliquam sunt mollitia eligendi!</p>
+      </section>
+
+    <section>
+      <h2 id="about">About Me</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam magni unde ea consequuntur, praesentium quidem assumenda asperiores pariatur, consequatur sint nulla quod? Veniam sequi nemo ea voluptatem velit earum nostrum!</p>
+    </section>
+
+    <section>
+      <h2 id="work">Work</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis cumque cum necessitatibus quaerat saepe ab quasi adipisci error, nam quos dolores in accusantium tempora earum tenetur eligendi odio? Ipsa, atque!</p>
+    </section>
+
+    <section>
+      <h2 id="projects">Projects</h2>
+      <p>Projects I've worked/working on</p>
+
+      <div class="carousel-slider">
+
+        <div class="slide">
+          <a href="temporary.html"><img src="assets/600x600.png" alt="Project-1" style="width:100%"></a>
+          <div class="slider-text">caption 1</div>
+        </div>
+        <div class="slide">
+          <a href="temporary.html"><img src="assets/1400x1400.png" alt="Project-2" style="width:100%"></a>
+          <div class="slider-text">caption 2</div>
+        </div>
+        <div class="slide">
+          <a href="temporary.html"><img src="assets/600x600.png" alt="Project-3" style="width:100%"></a>
+          <div class="slider-text">caption 3</div>
+        </div>
+        <div class="slide">
+          <a href="temporary.html"><img src="assets/1400x1400.png" alt="Project-4" style="width:100%"></a>
+          <div class="slider-text">caption 4</div>
+        </div>
+        <div class="slide">
+          <a href="temporary.html"><img src="assets/600x600.png" alt="Project-5" style="width:100%"></a>
+          <div class="slider-text">caption 5 </div>
+        </div>      
+  
+        <a class="left" onclick="nextSlide(-1)">❮</a>
+        <a class="right" onclick="nextSlide(1)">❯</a>
+      </div>
+  
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+    </section>
+
+    <section>
+      <h2 id="contact">My Socials</h2>
+      <ul>
+        <li><a href="">Instagram</a></li>
+        <li><a href="">Facebook</a></li>
+        <li><a href="">LinkedIn</a></li>
+        <li><a href="">Twitter</a></li>
+        <li><a href="">Discord</a></li>
+        <li><a href="">YouTube</a></li>
+        <li><a href="">Github</a></li>
+      </ul>
+    </article>
 
   </main>
 
+  <footer>
+
+    <section>   
+      <ul>
+        <li><a href="">About Me</a></li>
+        <li><a href="">Work</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="">Education</a></li>
+        <li><a href="">Collaborators</a></li>
+        <li><a href="">Contact</a></li>
+      </ul> 
+    </section>
+
+    <section>
+      <ul>
+        <li><a href="">Instagram</a></li>
+        <li><a href="">Facebook</a></li>
+        <li><a href="">LinkedIn</a></li>
+        <li><a href="">Twitter</a></li>
+        <li>insertmail@gmail.com</li>
+      </ul>
+    </section>
+
+  </footer>
   
-  <script src="script.js" defer></script>
+  <script src="script.js" defer>
+  
+  </script>
 
 </body>
+
 </html>
