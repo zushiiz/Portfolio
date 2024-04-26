@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagonal Div Background</title>
+<style>
+  .container {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db; /* Color of the triangles */
+  }
+  .container::after {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  }
+</style>
 </head>
 <body>
-  <a href="index.html">here</a>
+
+<div class="container">
+  <!-- Your content goes here -->
+</div>
+
 </body>
 </html>

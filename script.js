@@ -6,6 +6,7 @@ ham_menu.addEventListener('click', function () {
   mob_menu.classList.toggle('is-active');
 });
 
+
 function scrollAbout() {
   const element = document.getElementById("about");
   element.scrollIntoView({ behavior: 'smooth', block: 'center' });

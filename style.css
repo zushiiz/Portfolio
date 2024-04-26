@@ -115,6 +115,18 @@ ul{
   list-style-type:none;
 }
 
+.socials-main{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#background-triangle{
+  width: 1vw;
+  height: 1vh;
+  border-bottom: 100px solid red;
+  border-left: 100px solid transparent;
+}
+
 .scroll-nav{
   display:flex;
   flex-direction: row;
@@ -201,12 +213,27 @@ footer ul{
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     padding: 2rem;
+    overflow: hidden;
   }
   
+  .start-page::after{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 90vh;
+
+    background-color: #3498db;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  }
+
   .start-page > section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
   }
   
   section img{
