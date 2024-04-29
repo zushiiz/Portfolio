@@ -214,12 +214,12 @@ h2, p{
 /*desktop*/
 @media only screen and (min-width: 800px){
 
-  body > nav{
+  .triangle-container > nav{
     display: flex;
     justify-content: flex-end;
-    margin-top: 1.5vh;
-  }
 
+  }
+  
   nav button{
     margin: 0 3.5rem 0 3.5rem;
   }
@@ -234,10 +234,14 @@ h2, p{
     justify-content: center;
     padding: 2rem;
     overflow: hidden;
-    height: 81.7vh;
+    height: ;
+  }
+
+  .triangle-container{
+    height: 100vh;
   }
   
-  .start-page::after{
+  .triangle-container::after{
     z-index: -1;
     content: '';
     position: absolute;
