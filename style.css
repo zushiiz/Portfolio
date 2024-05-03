@@ -1,29 +1,21 @@
 :root{
 
   --bg-color: #e9ebf8;
-  --primary-text: #8d818c;
+  --primary-text: #0a1128;
 
   --secondary-text:#e9ebf8;;
 
-  --tag-table-color:#b4b8c5;
-  
-  --navbar-color:#b4b8c5;
-  --active-page:#a5a299;
-  --hover-bg:#fff;
-  --hover-text:var(--primary-text);
+  --first-section:#c4fff9;
+  --second-section:#9ceaef;
+  --third-section:#68d8d6;
+  --fourth-section:#3dccc7;
+  --fifth-section:#07beb8;
 
-  --textbox-color:#fff;
+  --footer-color:var(--primary-text);
 
-  --footer-color:var(--navbar-color);
 
-  --muted-text:#75f4f4;
-  
-  --switch-circle-bg:#dbd3d8;
-  --switch-circle-pos: 0.66vw;
-  --icon-sun:#d999b9;
-  --icon-moon:var(--muted-text);
 
-  --shadow:0 3px 10px rgb(0 0 0 / 0.6);
+  --shadow:1px 1px 2px black;
 
 }
 
@@ -88,7 +80,7 @@ display: block;
 width: 100%;
 height: 0.3em;
 margin: 0.1em;
-background-color:black;
+background-color:var(--secondary-text);
 transition: 0.4s;
 box-shadow: var(--shadow);
 }
@@ -109,10 +101,18 @@ transform: translateY(-0.51em) rotate(45deg);
 body{
   padding:0;
   margin:0;
+  background-color: var(--first-section);
+  color: var(--primary-text);
+}
+
+a{
+  color: var(--secondary-text);
+  text-decoration: none;
 }
 
 ul{
   list-style-type:none;
+  margin: 0;
 }
 
 .socials-main{
@@ -134,19 +134,14 @@ ul{
 	border: none;
 	padding: 0;
 	cursor: pointer;
-  text-shadow: 1px 1px 2px black;
-}
-
-footer{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 2rem;
-  background-color: gray;
+  text-shadow:var(--shadow);
+  color: var(--secondary-text);
 }
 
 footer section{
   display: flex;
   justify-content: center;
+  color: var(--secondary-text);
 }
 
 footer ul{
@@ -159,20 +154,21 @@ h2, p{
 }
 
 .about-me-section{
-  background-color: gray;
+  background-color: var(--second-section);
 }
 
 .work-section{
-  background-color: red;
+  background-color: var(--third-section);
 }
 
 .projects-section{
-  background-color: green;
+  background-color: var(--fourth-section);
 }
 
 .socials-section{
-  background-color: blue;
+  background-color: var(--fifth-section);
 }
+
 
 /*phone*/
 @media only screen and (max-width: 800px) {
@@ -181,13 +177,19 @@ h2, p{
     grid-template-rows: auto;
   }
 
+  img{
+    display:block;
+    width:100%;
+    max-width:20rem;
+    margin: 0 auto 0 auto;
+  }
+
   .left, .right{
     display: none;
   }
 
   article > section{
-    border: solid black;
-    margin: 3rem 3rem 5rem 3rem;
+    padding: 3rem 3rem 2rem 3rem;
   }
 
   .hamburger-container{
@@ -206,13 +208,18 @@ h2, p{
   }
 
   .socials-main img{
-    width: 2em;
+    width: 3em;
+    margin-bottom: 1em;
   }
 
-  #me-photo{
-    width: 100%;
+  footer{
+    padding: 2rem;
+    background-color:var(--footer-color);
   }
 
+  footer li{
+    margin-bottom:;
+  }
 }
 
 /*desktop*/
@@ -260,13 +267,13 @@ h2, p{
     width:100%;
     height: 100vh;
 
-    background-color: #3498db;
+    background-color:#8DE7ED;
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
   }
 
-
   section img{
     border: solid black;
+    width: 1vw;
   }
 
 }
