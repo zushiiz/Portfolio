@@ -220,6 +220,10 @@ h2, p{
   footer li{
     margin-bottom:;
   }
+
+  footer p{
+    font-size: 0.8em;
+  }
 }
 
 /*desktop*/
@@ -315,7 +319,7 @@ h2, p{
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: blue;
+  color: var(--primary-text);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
