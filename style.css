@@ -19,12 +19,42 @@
 
 }
 
+@font-face{
+  font-family:"nofex";
+  src: url(assets/nofex/Nofex.otf);
+}
+
+@font-face{
+  font-family:"noto-mono";
+  src: url(assets/noto-mono/NotoMono-Regular.ttf);
+}
+
+@font-face{
+  font-family:"noto-sans-bold";
+  src: url(assets/noto-sans/NotoSans-Bold.ttf);
+}
+
+html{
+  font-family:"noto-mono", "Times New Roman", Times, serif;
+}
+
+h1, h2, h3{
+  font-family:"noto-sans-bold", "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+/*mobile hamburger*/
 .mobile-menu{
   position: fixed;
-  top: -200%;
-  left: 0;
-  width: 100%;
+  right: -200%;
   height: 100vh;
+  width: 15vw;
   display: block;
   background-color: var(--bg-color);
   padding-top: 20vh;
@@ -33,9 +63,8 @@
 
 }
 
-/*mobile hamburger*/
 .mobile-menu.is-active{
-  top: 0;
+  right: 0;
 }
 
 .mobile-menu a{
@@ -44,9 +73,9 @@
   text-align: center;
   margin-bottom: 1em;
   padding: 1em 3em;
-  background-color: var(--navbar-color);
+  background-color: var(--primary-text);
   width: 100%;
-  max-width: 7rem;
+  max-width: 4rem;
 
   text-decoration:none;
 }
@@ -84,7 +113,6 @@ background-color:var(--primary-text);
 transition: 0.4s;
 }
 
-
 .hamburger.is-active:before{
   transform: translateY(0.51em) rotate(-45deg);
 }
@@ -119,7 +147,7 @@ ul{
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  margin: 1em 0 0 0;
+  margin: 1em 0;
   padding: 0;
 }
 
@@ -136,9 +164,10 @@ ul{
 	cursor: pointer;
   text-shadow:var(--shadow);
   color: var(--secondary-text);
+  font-family:"noto-sans-bold", "Times New Roman", Times, serif;
 }
 
-footer section{
+footer div{
   display: flex;
   justify-content: center;
   color: var(--secondary-text);
@@ -149,12 +178,12 @@ footer ul{
   padding:0;
 }
 
-h2, p{
-  margin: 0;
-}
-
 .about-me-section{
   background-color: var(--second-section);
+}
+
+#me-photo, .slide img{
+  border-radius: 1em;
 }
 
 .work-section{
@@ -169,6 +198,24 @@ h2, p{
   background-color: var(--fifth-section);
 }
 
+footer{
+  height: 50vh;
+}
+
+.partner-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.partner-box a{
+  padding: 1em;
+}
+
+.partner-box img{
+  width: 100%;
+}
 
 /*phone*/
 @media only screen and (max-width: 800px) {
@@ -177,11 +224,15 @@ h2, p{
     grid-template-rows: auto;
   }
 
+  .mobile-menu{
+    width: 100%;
+  }
+
   img{
     display:block;
     width:100%;
     max-width:20rem;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
   }
 
   .left, .right{
@@ -189,7 +240,8 @@ h2, p{
   }
 
   article > section{
-    padding: 3rem 3rem 2rem 3rem;
+    padding: 3rem;
+    padding-bottom:2rem;
   }
 
   .hamburger-container{
@@ -209,20 +261,37 @@ h2, p{
 
   .socials-main img{
     width: 3em;
-    margin-bottom: 1em;
   }
 
   footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 2rem;
     background-color:var(--footer-color);
-  }
-
-  footer li{
-    margin-bottom:;
+    height: auto;
   }
 
   footer p{
     font-size: 0.8em;
+    text-align: center;
+  }
+
+  .footer-links{
+    margin:1em 0 3em 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 98vw;
+  }
+
+  .footer-links a{
+    padding: 0.5em 1em;
+    border-right: 1px solid var(--secondary-text);
+  }
+
+  #no-border{
+    border: none;
   }
 }
 
@@ -232,15 +301,14 @@ h2, p{
   .triangle-container > nav{
     display: flex;
     justify-content: flex-end;
-
   }
   
   nav button{
-    margin: 0 3.5rem 0 3.5rem;
+    margin: 0 3.5rem;
   }
 
   .hamburger-container{
-    margin: 0 1.5rem 0 0;
+    margin-right:1.5rem;;
   }
 
   .start-page{
@@ -250,14 +318,14 @@ h2, p{
     overflow: hidden;
   }
 
-  .start-page > section{
+  .start-page > div{
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 2;
     padding: 3em;
   }
-  
+
   .triangle-container{
     height: 100vh;
   }
@@ -275,7 +343,7 @@ h2, p{
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
   }
 
-  section img{
+  img{
     border: solid black;
     width: 1vw;
   }
@@ -342,9 +410,9 @@ h2, p{
 
 .dot{
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 1rem;
+  width: 1rem;
+  margin: 0.5rem 0.1rem;
   background-color: gray;
   border-radius: 50%;
   display: inline-block;
