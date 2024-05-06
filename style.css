@@ -141,6 +141,7 @@ a{
 ul{
   list-style-type:none;
   margin: 0;
+  padding: 0;
 }
 
 .socials-main{
@@ -173,16 +174,11 @@ footer div{
   color: var(--secondary-text);
 }
 
-footer ul{
-  margin:0;
-  padding:0;
-}
-
 .about-me-section{
   background-color: var(--second-section);
 }
 
-#me-photo, .slide img{
+.me-photo, .slide img{
   border-radius: 1em;
 }
 
@@ -200,6 +196,7 @@ footer ul{
 
 footer{
   height: 50vh;
+  background-color:var(--footer-color);
 }
 
 .partner-box{
@@ -217,6 +214,17 @@ footer{
   width: 100%;
 }
 
+img{
+  display:block;
+  width:100%;
+  max-width:20rem;
+  margin: 0 auto;
+}
+
+.socials-main img{
+  width: 3rem;
+}
+
 /*phone*/
 @media only screen and (max-width: 800px) {
   body{
@@ -226,13 +234,6 @@ footer{
 
   .mobile-menu{
     width: 100%;
-  }
-
-  img{
-    display:block;
-    width:100%;
-    max-width:20rem;
-    margin: 0 auto;
   }
 
   .left, .right{
@@ -259,16 +260,11 @@ footer{
     grid-template-columns: 80% 20%;
   }
 
-  .socials-main img{
-    width: 3em;
-  }
-
   footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-    background-color:var(--footer-color);
     height: auto;
   }
 
@@ -342,12 +338,7 @@ footer{
     background-color:#8DE7ED;
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
   }
-
-  img{
-    border: solid black;
-    width: 1vw;
-  }
-
+  
 }
 
 /* carousel stuff*/
@@ -380,30 +371,6 @@ footer{
   text-align: center;
 }
 
-.left, .right{
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: var(--primary-text);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.right{
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.left:hover, .right:hover{
-  background-color: black;
-}
-
 .dot-container{
   text-align: center;
 }
@@ -418,6 +385,6 @@ footer{
   display: inline-block;
 }
 
-.active, .dot:hover {
+.active{
   background-color: white;
 }

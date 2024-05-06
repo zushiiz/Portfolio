@@ -1,46 +1,39 @@
-const ham_menu = document.querySelector('.hamburger');
-const mob_menu = document.querySelector('.mobile-menu');
+const ham_menu = document.querySelector(".hamburger");
+const mob_menu = document.querySelector(".mobile-menu");
 
-ham_menu.addEventListener('click', function () {
-  ham_menu.classList.toggle('is-active');
-  mob_menu.classList.toggle('is-active');
+ham_menu.addEventListener("click", function () {
+  ham_menu.classList.toggle("is-active");
+  mob_menu.classList.toggle("is-active");
 });
 
 
 function scrollAbout() {
   const element = document.getElementById("about");
-  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function scrollWork() {
   const element = document.getElementById("work");
-  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function scrollProjects() {
   const element = document.getElementById("projects");
-  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function scrollContact() {
   const element = document.getElementById("contact");
-  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 
-let slideIndex = 1;
-showSlide(slideIndex);
+let slideIndex = 0;
 
-function nextSlide(n) {
-  showSlide(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlide(slideIndex = n);
-}
+showSlide();
 
-function showSlide(n) {
+
+function showSlide() {
   let i;
   let slide = document.getElementsByClassName("slide");
-  if (n > slide.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slide.length}
   for (i = 0; i < slide.length; i++) {
     slide[i].style.display = "none";
   }
@@ -54,5 +47,4 @@ function showSlide(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   dots[slideIndex-1].className += " active";
-
 }
