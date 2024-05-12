@@ -1,0 +1,99 @@
+.github {
+  width: 30rem;
+  height: 12rem;
+
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 21rem 7rem;
+  grid-template-rows: 3rem 6rem 3rem;
+
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+.github a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.github a:hover {
+  color: white;
+}
+
+.github .username {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 2fr 1fr;
+
+  column-gap: 0.5rem;
+}
+
+.github .username img {
+  grid-row: span 2;
+
+  width: 100%;
+
+  align-self: center;
+  justify-self: center;
+}
+
+.github .username h3 {
+  margin: 0;
+
+  font-size: 2rem;
+}
+
+.github .username p {
+  margin: 0;
+
+  font-size: 0.8rem;
+}
+
+.github .popularity {
+  justify-self: flex-end;
+  align-self: flex-start;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.github .popularity svg {
+  fill: currentColor;
+  margin: 0 0.2rem 0 1rem;
+}
+
+.github .popularity p {
+  margin: 0;
+}
+
+.github .description {
+  margin: 1rem 0.2rem;
+
+  grid-column: span 2;
+
+  overflow: hidden;
+  max-height: 3.6em;
+}
+
+.github img {
+  width: 3rem;
+  border-radius: 100px;
+
+  object-fit: contain;
+}
+
+.github .information {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.github .information svg {
+  fill: currentColor;
+
+  margin: 0 0.2rem 0 1rem;
+}

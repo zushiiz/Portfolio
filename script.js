@@ -27,9 +27,7 @@ function scrollContact() {
 
 let slideIndex = 0;
 
-
 showSlide();
-
 
 function showSlide() {
   let i;
