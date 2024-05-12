@@ -1,99 +1,79 @@
 .github {
-  width: 30rem;
-  height: 12rem;
 
-  padding: 1rem;
+  height: 20rem;
 
   display: grid;
-  grid-template-columns: 21rem 7rem;
-  grid-template-rows: 3rem 6rem 3rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 4rem;
 
   background-color: #0d1117;
   color: #e6edf3;
+  
+  padding: 1rem;
+  border-radius: 0.3rem;
 }
 
 .github a {
   text-decoration: none;
   color: inherit;
+  grid-column: 2;
 }
 
-.github a:hover {
-  color: white;
+.github svg {
+  fill: currentColor;
+
+  margin: 0 0.2rem 0 1rem;
 }
 
-.github .username {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 2fr 1fr;
-
-  column-gap: 0.5rem;
-}
-
-.github .username img {
-  grid-row: span 2;
-
-  width: 100%;
-
-  align-self: center;
-  justify-self: center;
-}
-
-.github .username h3 {
-  margin: 0;
-
-  font-size: 2rem;
-}
-
-.github .username p {
-  margin: 0;
-
-  font-size: 0.8rem;
-}
-
-.github .popularity {
-  justify-self: flex-end;
-  align-self: flex-start;
+.popularity{
+  grid-row: 3;
+  grid-column: 2;
 
   display: flex;
-
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.github .popularity svg {
-  fill: currentColor;
-  margin: 0 0.2rem 0 1rem;
+.information{
+  grid-row: 3;
+  grid-column: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-.github .popularity p {
-  margin: 0;
+.information svg{
+  grid-row:2;
+  grid-column: 2;
 }
 
-.github .description {
-  margin: 1rem 0.2rem;
+.information p{
+  grid-column: 1;
+}
 
-  grid-column: span 2;
 
-  overflow: hidden;
-  max-height: 3.6em;
+.description{
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  margin: 1rem 0;
+}
+
+.user{
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .github img {
-  width: 3rem;
+  min-width: 4rem;
+  max-width: 7rem;
   border-radius: 100px;
 
   object-fit: contain;
-}
 
-.github .information {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.github .information svg {
-  fill: currentColor;
-
-  margin: 0 0.2rem 0 1rem;
+  grid-row: 1 / span 2;
+  display: block;
+  align-self: center;
 }

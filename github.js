@@ -31,24 +31,21 @@ function createCard(element){
   response.json().then(data => {
     element.appendChild((() => { // name
       const e = document.createElement("div");
-      e.classList.add("username");
+      e.classList.add("user");
 
       e.appendChild((() => { // profile img
         const f = document.createElement("img");
         f.src = data.owner.avatar_url;
-        
-        if (data.owner.type === "User") {
-          f.style.borderRadius = "100px";
-        }
+
         return f;
       })());
 
-      e.appendChild((() => { // title
+      e.appendChild((() => { // title link
         const f = document.createElement("a");
         f.href = data.owner.html_url;
         f.target = "_blank";
 
-        f.appendChild((() => {
+        f.appendChild((() => { // title text
           const g = document.createElement("h3");
           g.innerHTML = data.name;
 
@@ -102,7 +99,8 @@ function createCard(element){
     element.appendChild((() => { // description
       const e = document.createElement("p");
       e.classList.add("description");
-      e.innerHTML = data.description; // !! ADD FAILSAFE
+      e.innerHTML = data.description;
+
       return e;
     })());
 

@@ -355,6 +355,7 @@ img{
 
 .slide{
   display: none;
+  transition: opacity 0.5 ease;
   
 }
 
