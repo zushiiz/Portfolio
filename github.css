@@ -123,7 +123,7 @@
   .user{
     display: grid;
     grid-template-columns: 7rem 1fr;
-    grid-template-rows: 1fr 2rem;
+    grid-template-rows: 6rem 2rem;
 
     align-items: center;
   }
@@ -153,5 +153,6 @@
 
   .github h3{
     font-size: 2rem;
+    margin: 0;
   }
 }

@@ -236,12 +236,12 @@ img{
     grid-template-rows: auto;
   }
 
-  .mobile-menu{
-    width: 100%;
+  .desktop-box{
+    display: none;
   }
 
-  .left, .right{
-    display: none;
+  .mobile-menu{
+    width: 100%;
   }
 
   article > section{
@@ -349,22 +349,82 @@ img{
     background-color:#8DE7ED;
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
   }
-  
-  .projects-section > div{
-    padding: 4rem;
-    align-items: center;
-    justify-content: center;
-  }
 
   .projects-section{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem 1fr 10rem;
   }
 
   .projects-text{
+    height: 90%;
+    width: 90%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+
+    background-color: blue;
+
+    margin: auto;
+  }
+
+  .projects-section > p {
+    height: 90%;
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: blue;
+
+    margin: auto;
+  }
+
+  .sliders-dots{
+    margin: 1rem 3rem;
+  }
+
+  .work-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .work-text{
+    height: 94%;
+    width: 90%;
+    margin: 2rem auto 0 auto;
+
+    background-color: red;
+  }
+
+  .partner-text, .partner-box{
+    width: 90%;
+
+    margin: 2rem auto;
+
+    background-color: red;
+  }
+
+  .partner-text p {
+    margin: 0;
+  }
+
+  .about-me-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about-me-section div{
+    width: 95%;
+    background-color: green;
   }
 
 }
@@ -381,9 +441,8 @@ img{
   box-sizing: border-box;
 }
 
-.slide{
+.slide-1, .slide-2, .slide-3{
   display: none;
-  transition: opacity 0.5 ease;
   
 }
 
