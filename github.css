@@ -97,6 +97,7 @@
   .github {
     height: 25rem;
     width: 100%;
+    min-width: 25rem;
 
     display: grid;
     grid-template-columns: 1fr 6rem;
