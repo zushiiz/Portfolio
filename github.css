@@ -121,6 +121,11 @@
     margin: 0;
   }  
 
+  .github img:hover{
+    scale: 1.1;
+    transition: 0.3s ease-out;
+  }
+
   .user{
     display: grid;
     grid-template-columns: 7rem 1fr;
