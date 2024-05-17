@@ -84,10 +84,11 @@
     display: none;
   }
 
-  .about-me-layout{
-    grid: 1fr 1fr 1fr;
+  .about-me-layout > section{
+    margin: 0;
+    padding:0;
   }
-
+  
 }
 
 /*desktop*/
@@ -95,6 +96,12 @@
 
   .hamburger-container{
     position: absolute;
+  }
+
+  .about-me-layout{
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
 }

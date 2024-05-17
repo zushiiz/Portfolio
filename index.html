@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
+
+  <script>
+    let localS = localStorage.getItem("theme")
+
+    if (localS === "dark"){
+    document.documentElement.setAttribute("data-theme", "dark")
+    }
+  </script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="github.css">
 
@@ -19,6 +28,9 @@
     <a href="projects.html">Projects</a>
     <a href="">Education</a>
     <a href="temporary.html">Contact</a>
+
+
+    <button class="theme" id="theme-switcher">Magical Button</button>
 
   </nav>
   

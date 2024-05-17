@@ -1,4 +1,4 @@
-:root{
+:root[data-theme="light"]{
 
   --bg-color: #c4fff9;
   --primary-text: #0a1128;
@@ -12,13 +12,29 @@
   --fifth-section:#07beb8;
 
   --footer-color:var(--primary-text);
+}
 
+:root[data-theme="dark"]{
+  --bg-color: #0D0221;
+  --primary-text:#e9ebf8;
 
+  --secondary-text:#0a1128;
 
+  --first-section:#0F084B;
+  --second-section:#0F084B;
+  --third-section:#0F084B;
+  --fourth-section:#0F084B;
+  --fifth-section:#0F084B;
+
+  --footer-color:var(--primary-text);
+}
+
+:root{
+  --transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
   --shadow:1px 1px 2px black;
   --round:0.5rem;
-
-
+  --light-color:#e9ebf8;
+  --dark-color:#0a1128;
 }
 
 @font-face{
@@ -53,6 +69,21 @@ p{
   padding: 0;
 }
 
+.theme{
+  background-color:var(--dark-color);
+  color: var(--light-color);
+
+  font-family: "noto-mono", "Times New Roman", Times, serif;
+  display: flex;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  border: none;
+  align-items: center;
+  border-radius:var(--round);
+  height: 2rem;
+}
+
 /*mobile hamburger*/
 .mobile-menu{
   position: fixed;
@@ -60,7 +91,6 @@ p{
   height: 100vh;
   width: 17vw;
   display: block;
-  background-color: var(--secondary-text);
   transition: 0.4s;
   z-index: 10;
 
@@ -68,6 +98,8 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: var(--light-color);
 
 }
 
@@ -79,11 +111,13 @@ p{
   margin-bottom: 1rem;
   padding: 1rem 4rem;
   text-align: center;
-  background-color: var(--primary-text);
   width: 100%;
   max-width: 4rem;
 
   text-decoration:none;
+  border-radius: var(--round);
+
+  background-color:var(--dark-color);
 }
 
 .hamburger-container{
@@ -115,7 +149,7 @@ display: block;
 width: 100%;
 height: 0.3em;
 margin: 0.1em;
-background-color:var(--primary-text);
+background-color:var(--dark-color);
 transition: 0.4s;
 box-shadow: var(--shadow);
 }
@@ -140,10 +174,12 @@ body{
   margin:0;
   background-color: var(--bg-color);
   color: var(--primary-text);
+
+  transition: var(--transition);
 }
 
 a{
-  color: var(--secondary-text);
+  color: var(--light-color);
   text-decoration: none;
 }
 
@@ -219,6 +255,9 @@ footer p{
 .footer-links a{
   padding: 0.5em 1em;
   border-right: 1px solid var(--secondary-text);
+
+
+  color: var(--secondary-text);
 }
 #no-border{
   border: none;
